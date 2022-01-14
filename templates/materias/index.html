@@ -1,0 +1,44 @@
+{%extends 'base/base.html' %}
+
+{%block title_section%}
+Materias
+{%endblock%}
+
+{%block main%} 
+<div class="card shadow mb-4">
+{% if user.is_authenticated %}
+<h4 style="text-align:center">Bienvenido a la seccion de materias</h1>
+<br>
+
+
+    <div class="col-xs-12">
+    <div class="mx-auto" style="width:300px;">
+<label  for="programa">Da click para crear un nuevo programa académico</label>
+<div class="w-33">
+
+
+<button class="btn btn-primary" style="display: block; margin: 0 auto" 
+onclick="location.href='{% url 'materias:crear_programa' %}'">Click
+    </button> 
+
+<br>
+
+   <br><br><br><br>
+   <label  for="programa">Da click para crear materias</label>
+<div class="w-33">
+<button class="btn btn-primary" style="display: block; margin: 0 auto" 
+onclick="location.href='{% url 'materias:crear_materia' %}'">Click
+    </button> 
+
+
+</div>
+<br><br>
+</div>
+</div>
+</div>
+
+<br><br><br><br>
+{% else %}
+<p>No te has logeado</p>
+{%endif%}
+{%endblock%}

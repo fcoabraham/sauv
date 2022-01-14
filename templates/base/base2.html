@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block css%}
+    {%endblock%}
+    <title>{% block title %}Document{% endblock %}</title>
+</head>
+<body>
+    {% block header %}
+    <h4>Este es el bloque del header</h4>
+    {% endblock %} 
+    
+    {% block content %}
+    <h4>Este es el contenido del archivo base</h4>
+    {% endblock %} 
+
+    {% block footer %}
+    
+    {% endblock %} 
+
+    {%block javascript%}
+    {%endblock%}
+
+
+</body>
+</html>

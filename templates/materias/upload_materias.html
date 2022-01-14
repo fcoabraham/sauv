@@ -1,0 +1,95 @@
+{%extends 'base/base.html' %}
+
+{%block title_section%}
+Subir archivos
+{%endblock%}
+
+{%block main%} 
+{%for materias in materia%}
+<h6>{{materias.nombreMateria}}</h6>
+{%endfor%}
+<form method="POST" enctype="multipart/form-data">
+{%csrf_token%}
+
+<input type="hidden" class="form-control form-control-user" value="{{idMat}}" name="materia"> 
+<br>
+<label for="presentacion">Presentacion de la materia:</label>
+<input type="file" name="presentacion"> 
+<br><br>
+<label for="bloque1">Contenido del bloque 1:</label>
+<input type="file" name="bloque1"> 
+<br><br>
+<label for="bloque2">Contenido del bloque 2:</label>
+<input type="file" name="bloque2"> 
+<br><br>
+<label for="bloque3">Contenido del bloque 3:</label>
+<input type="file" name="bloque3"> 
+<br><br>
+<label for="bloque4">Contenido del bloque 4:</label>
+<input type="file" name="bloque4">
+<br><br>
+<label for="bloque5">Contenido del bloque 5:</label>
+<input type="file" name="bloque5"> 
+<br><br>
+<label for="bloque6">Contenido del bloque 6:</label>
+<input type="file" name="bloque6"> 
+<br><br>
+<label for="bloque7">Contenido del bloque 7:</label>
+<input type="file" name="bloque7">
+<br><br>
+<label for="bloque8">Contenido del bloque 8:</label>
+<input type="file" name="bloque8"> 
+<br><br>
+<label for="bloque9">Contenido del bloque 9:</label>
+<input type="file" name="bloque1"> 
+<br><br>
+<label for="bloque10">Contenido del bloque 10:</label>
+<input type="file" name="bloque10"> 
+<br><br>
+<label for="foroact1">Foros y actividades del bloque 1:</label>
+<input type="file" name="foroact1"> 
+<br><br>
+<label for="foroact2">Foros y actividades del bloque 2:</label>
+<input type="file" name="foroact2"> 
+<br><br>
+<label for="foroact3">Foros y actividades del bloque 3:</label>
+<input type="file" name="foroact3"> 
+<br><br>
+<label for="foroact4">Foros y actividades del bloque 4:</label>
+<input type="file" name="foroact4"> 
+<br><br>
+<label for="foroact5">Foros y actividades del bloque 5:</label>
+<input type="file" name="foroact5"> 
+<br><br>
+<label for="foroact6">Foros y actividades del bloque 6:</label>
+<input type="file" name="foroact6"> 
+<br><br>
+<label for="foroact7">Foros y actividades del bloque 7:</label>
+<input type="file" name="foroact7"> 
+<br><br>
+<label for="foroact8">Foros y actividades del bloque 8:</label>
+<input type="file" name="foroact8"> 
+<br><br>
+<label for="foroact9">Foros y actividades del bloque 9:</label>
+<input type="file" name="foroact9"> 
+<br><br>
+<label for="foroact10">Foros y actividades del bloque 10:</label>
+<input type="file" name="foroact10"> 
+<br><br>
+<label for="foroact10">Foros y actividades del bloque 10:</label>
+<input type="file" name="foroact10"> 
+<br><br>
+<label for="examen1">Formato de examen parcial 1:</label>
+<input type="file" name="examen1"> 
+<br><br>
+<label for="examen2">Formato de examen parcial 2:</label>
+<input type="file" name="examen2"> 
+<br><br>
+<label for="examen3">Formato de examen parcial 3:</label>
+<input type="file" name="examen3"> 
+
+
+<br><br>
+<button type="submit" class="btn btn-primary">Subir archivo</button>
+</form>
+{%endblock%}

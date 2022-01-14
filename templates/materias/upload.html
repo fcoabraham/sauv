@@ -1,0 +1,14 @@
+{%extends 'base/base.html' %}
+
+{%block title_section%}
+Subir archivos
+{%endblock%}
+
+{%block main%} 
+<h2>Subida de archivos</h2>
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<input type="file" name="document">
+<button type="submit">Upload file</button>
+</form>
+{%endblock%}

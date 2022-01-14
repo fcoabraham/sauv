@@ -1,0 +1,46 @@
+{%extends 'base/base.html' %}
+
+{%block title_section%}
+Listado Materias
+{%endblock%}
+
+{%block main%} 
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Materias</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>Periodo</th>
+                        <th>Carrera</th>
+                        <th>Archivos</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% if materias %}
+                    {% for materia in materias %}
+                    <tr>
+                        <td>{{materia.nombreMateria}}</td>
+                        <td>{{materia.numPeriodo}}</td>
+                        <td>{{materia.idPrograma.nombrePrograma}}</td>
+                        <td><a class="btn btn-primary" href="{% url 'materias:files_list' materia.id%}">Ver archivos</a>
+
+                    </tr>
+                    {%endfor%}
+                    {%endif%}
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
+{%endblock%}

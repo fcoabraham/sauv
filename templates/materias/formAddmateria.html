@@ -1,0 +1,16 @@
+{%extends 'base/base.html' %}
+
+{%block title_section%}
+Agregar materia
+{%endblock%}
+
+{%block main%} 
+<form method="POST">
+    {% csrf_token %}
+    {{formMateria.as_p}}
+    
+
+    <button class="btn btn-primary" type="Submit" style="display: block; margin: 0 auto;">Guardar</button>
+</form>
+
+{%endblock%}
